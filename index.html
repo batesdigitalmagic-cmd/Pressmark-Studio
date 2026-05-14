@@ -674,6 +674,58 @@
     transition: color 0.2s;
   }
   .footer-links a:hover { color: var(--gold); }
+
+  /* ── MOBILE RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 2rem; }
+    .nav-links { display: none; } /* Hide nav links on mobile, could add hamburger later */
+
+    .hero {
+      grid-template-columns: 1fr;
+      padding-top: 100px;
+    }
+    .hero-left { padding: 4rem 2rem; }
+    .hero-right { padding: 2rem; }
+
+    .stats-bar {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .services-header {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding-bottom: 2rem;
+    }
+    .services-grid { grid-template-columns: 1fr; }
+
+    .process-steps { grid-template-columns: 1fr; gap: 2rem; }
+    .process-steps::before { display: none; }
+
+    .why-layout { grid-template-columns: 1fr; gap: 3rem; }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1rem;
+    }
+    .port-item:first-child { grid-row: auto; }
+
+    #contact {
+      grid-template-columns: 1fr;
+      padding: 4rem 2rem;
+    }
+    .contact-left { border-right: none; border-bottom: 1px solid rgba(245,240,232,0.1); padding-bottom: 3rem; margin-bottom: 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+
+    footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      padding: 2rem;
+    }
+  }
 </style>
 </head>
 <body>
@@ -703,7 +755,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-image-wrap">
-      <img src="publication-sample.jpg" alt="Publication sample" class="hero-image">
+      <img src="yearbook.png" alt="Publication sample" class="hero-image">
     </div>
   </div>
 </section>
